@@ -85,6 +85,12 @@ public class Main {
 		
 		/* Who has the most working experience in the organization? */
 		
+		Employee employee = list.stream()
+		        .min(Comparator.comparing(Employee::getYearOfJoining))
+		        .get();
+
+		System.out.println(employee.getName());
+		
 		/*
 		 * How many male and female employees are there in the sales and marketing team?
 		 */
